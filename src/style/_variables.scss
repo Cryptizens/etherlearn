@@ -1,0 +1,26 @@
+
+$gray-900: #353b3f;
+$gray-800: #67737a;
+$gray-700: #8999a3;
+$gray-600: #adb5ba;
+$gray-500: #c0c9cf;
+$gray-400: #e7eaec;
+$gray-300: #eef0f1;
+$gray-200: #f3f4f4;
+$gray-100: #fafafa;
+$base-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+
+$sunny-gradient: linear-gradient(20deg,rgb(219,112,147),#daa357);
+$sand-to-blue-gradient: linear-gradient(to right, #3e5151, #decba4);
+$broken-hearts-gradient: linear-gradient(45deg, darken(#d9a7c7, 10%), darken(#fffcdc, 5%));
+$foreground-color: $gray-100;
+$dawn-gradient: linear-gradient(to right, #1d2b64, #f8cdda);
+$sky-gradient: linear-gradient(to right, #076585, #fff);
+$lawrencium-gradient: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+$steel-gray-gradient: linear-gradient(to right, #1f1c2c, #928dab);
+$gray-gradient: linear-gradient(45deg, $gray-300, $gray-100);
+$dark-gray-gradient: linear-gradient(45deg, $gray-500, $gray-200);
+$limeade-gradient: linear-gradient(150deg, darken(#a1ffce, 20%), #faffd1);
+
+$nav-height: 50px;
+$footer-height: 30px;

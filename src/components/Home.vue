@@ -5,23 +5,18 @@
     div
       h1 Understanding the blockchain
     div
-      h2 Cryptographic hashing functions
-      input(v-model="hashingInput.hashInput")
-      p {{ hashedInput }}
+
     div
-      h2 Hashing transactions
-      ul(v-for="transaction in hashingTransactions.transactions")
-        li
-          input(v-model="transaction.fromAddress")
-          input(v-model="transaction.toAddress")
-          input(v-model="transaction.amount")
-      p {{ hashingTransactions.transactions }}
-      p {{ sha256(hashingTransactions.transactions) }}
-    div
+
       h2 Mining a block
-      p Block hash: {{ sha256(hashingTransactions.transactions) }}
-      p Nonce: {{ miningBlocks.nonce }}
-      p Block header hash: {{ miningBlocks.outputHash }}
+      app-block(
+        :previousBlockHash="'lol'"
+        :transactions="hashingTransactions.transactions",
+        :transactionsHash="sha256(hashingTransactions.transactions)",
+        :nonce="miningBlocks.nonce",
+        :outputHash="miningBlocks.outputHash"
+      )
+
       p Difficulty:
         input(v-model="miningBlocks.difficulty" type="number")
       button(@click="launchMining()") Mine this block !
@@ -43,7 +38,12 @@
 </template>
 
 <script>
+import Block from './shared/Block.vue'
+
 export default {
+  components: {
+    'app-block': Block
+  },
   data() {
     return {
       hashingInput: {
@@ -81,31 +81,6 @@ export default {
     },
     hashedTransactions() {
       return this.sha256(this.hashingTransactions.transactions);
-    }
-  },
-  methods: {
-    sha256: function(input) {
-      var output = CryptoJS.SHA256(JSON.stringify(input)).toString(CryptoJS.enc.Hex);
-      return output;
-    },
-    launchMining() {
-      var nonce = this.miningBlocks.nonce;
-      var content = this.hashedTransactions;
-      var difficulty = this.miningBlocks.difficulty;
-      var challengeAchieved = false;
-      self = this;
-
-      while (!challengeAchieved) {
-        self.miningBlocks.outputHash = self.sha256(JSON.stringify(content) + self.miningBlocks.nonce.toString());
-        challengeAchieved = self.blockMined(self.miningBlocks.outputHash, difficulty);
-        self.miningBlocks.nonce++
-      }
-
-      return true;
-    },
-    blockMined: function(hash, difficulty) {
-      var leadingZeros = Array(parseInt(difficulty) + 1).join("0");
-      return hash.startsWith(leadingZeros);
     }
   }
 }
