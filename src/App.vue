@@ -31,8 +31,40 @@ body {
   letter-spacing: -.01em;
 }
 
+button {
+  background: darken(#a1ffce, 20%);
+  border: 1px solid $gray-500;
+  transition: box-shadow .25s;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.17);
+  font-family: 'Andale Mono';
+
+  display: inline-block;
+  border-radius: 3px;
+  padding: 0.5rem 0.5rem;
+  margin: 1rem 1rem;
+  margin-top: 20px;
+  // width: 11rem;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    background: darken(#a1ffce, 20%);
+  }
+}
+
+input.short {
+  margin-left: 15px;
+  padding: 3px;
+  min-height: 20px;
+  width: 25px;
+  text-align: center;
+  font-size: 16px;
+}
+
 h1 {
   font-size: 34px;
+  text-align: center;
 }
 
 h3 {

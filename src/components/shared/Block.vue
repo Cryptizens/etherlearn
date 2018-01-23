@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     h1 BLOCK #1
-    h2 Transactions
+    p Transactions
     table.block-input
       thead
         th.align-left From
@@ -12,7 +12,7 @@
           td {{ transaction.fromAddress }}
           td {{ transaction.toAddress }}
           td.align-right {{ transaction.amount }}
-    h2 Hashes
+    //- h2 Hashes
     p Transactions hash
     p.block-input.hash {{ transactionsHash }}
     p Previous block hash
@@ -33,8 +33,6 @@ export default {
   ],
   computed: {
     transactionsHash() {
-      console.log('was here');
-      console.log(this.sha256("lol"));
       return this.sha256(JSON.stringify(this.transactions));
     }
   }
@@ -46,9 +44,9 @@ div {
   background: $limeade-gradient;
   border-radius: 6px;
   color: $gray-900;
-  padding: 20px 40px 0 40px;;
-  max-width: 500px;
-  margin: 0 auto;
+  padding: 20px 40px 20px 40px;;
+  max-width: 600px;
+  margin: 20px auto;
   border: 1px solid $gray-500;
   transition: box-shadow .25s;
   box-shadow: 0 2px 20px rgba(0,0,0,0.17);
@@ -69,6 +67,8 @@ table {
   background-color: white;
   border-radius: 3px;
   padding: 10px;
+  min-height: 15px;
+  overflow: scroll;
 }
 
 th {

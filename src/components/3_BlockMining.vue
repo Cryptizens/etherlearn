@@ -1,15 +1,20 @@
 <template lang="pug">
   div
     h1 Mining a block
-    p We've seen how we
+    div(style="text-align: center")
+      label Mining difficulty
+      input.short(v-model="difficulty" type="number")
+      button(@click="mineBlock()") MINE THIS BLOCK !
+    div(style="text-align: center")
+      small Mining difficulty constraint: output hash of the Block must start with {{ difficulty }} zeros
     app-block(
-      :previousBlockHash="'lol'"
+      :previousBlockHash="'---not applicable---'"
       :transactions="transactions",
       :nonce="nonce",
       :minedOutputHash="minedOutputHash"
     )
-    input(v-model="difficulty")
-    button(@click="mineBlock()") Mine this block!
+
+
 </template>
 
 <script>

@@ -3,6 +3,7 @@
     h2 Cryptographic hashing functions
     input(v-model="hashInput")
     span {{ hashOutput }}
+    span {{ hashOutput }}
 </template>
 
 <script>

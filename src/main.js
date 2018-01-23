@@ -12,8 +12,7 @@ const router = new VueRouter({
 Vue.mixin({
   methods: {
     sha256: function(x) {
-      console.log('Was here');
-      CryptoJS.SHA256(x).toString(CryptoJS.enc.Hex);
+      return CryptoJS.SHA256(x).toString(CryptoJS.enc.Hex);
     },
     mine: function(blockContent, startingNonce, difficulty) {
       var nonce = startingNonce;
