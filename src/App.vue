@@ -43,7 +43,6 @@ button {
   padding: 0.5rem 0.5rem;
   margin: 1rem 1rem;
   margin-top: 20px;
-  // width: 11rem;
   color: white;
   font-weight: bold;
   font-size: 16px;
@@ -53,8 +52,14 @@ button {
   }
 }
 
+button.inverted {
+  background: white;
+  color: darken(#a1ffce, 20%);
+  border: none;
+}
+
 input.short {
-  margin-left: 15px;
+  margin: 1rem 1rem;
   padding: 3px;
   min-height: 20px;
   width: 25px;

@@ -5,6 +5,7 @@
       label Mining difficulty
       input.short(v-model="difficulty" type="number")
       button(@click="mineBlock()") MINE THIS BLOCK !
+      button.inverted(@click="resetNonce()") RESET NONCE
     div(style="text-align: center")
       small Mining difficulty constraint: output hash of the Block must start with {{ difficulty }} zeros
     app-block(
@@ -59,6 +60,9 @@ export default {
       this.nonce = results.nonce;
       this.minedOutputHash = results.outputHash;
       return true;
+    },
+    resetNonce() {
+      this.nonce = 0;
     }
   }
 }

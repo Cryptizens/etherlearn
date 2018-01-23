@@ -9,9 +9,12 @@
         th.align-right Amount
       tbody
         tr(v-for="transaction in transactions")
-          td {{ transaction.fromAddress }}
-          td {{ transaction.toAddress }}
-          td.align-right {{ transaction.amount }}
+          td
+            input.table-input(v-model="transaction.fromAddress")
+          td
+            input.table-input(v-model="transaction.toAddress")
+          td.align-right
+            input.align-right.table-input(v-model="transaction.amount")
     //- h2 Hashes
     p Transactions hash
     p.block-input.hash {{ transactionsHash }}
@@ -60,6 +63,12 @@ div {
 
 table {
   width: 100%;
+  .table-input {
+    border: none;
+    font-family: 'Andale Mono';
+    font-size: 16px;
+    max-width: 100px;
+  }
 }
 
 .block-input {
