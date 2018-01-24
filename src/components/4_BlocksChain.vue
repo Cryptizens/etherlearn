@@ -69,7 +69,7 @@ export default {
           {
             fromAddress: 'Albert',
             toAddress: 'Eddy',
-            amount: '3.58 ETH'
+            amount: '7.50 ETH'
           }
         ],
         [
