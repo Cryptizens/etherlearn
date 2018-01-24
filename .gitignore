@@ -10,3 +10,5 @@ yarn-error.log
 *.ntvs*
 *.njsproj
 *.sln
+.cloudflare-email
+.cloudflare-api
