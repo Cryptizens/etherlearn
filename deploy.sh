@@ -11,7 +11,7 @@ aws_target_bucket="etherlearn.io"
 aws_profile="etherlearn"
 
 # CLOUDFLARE SETTINGS
-cloudflare_resource_id="be19a35553a946d7c188df13f876c4d8"
+cloudflare_resource_id="a5e92ab2e3b69bc94eb3c74dd9c3ab74"
 cloudflare_email_file=".cloudflare-email"
 cloudflare_api_file=".cloudflare-api"
 cloudflare_email=$(cat "$cloudflare_email_file")
@@ -35,5 +35,5 @@ curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$cloudflare_resource_
 # Command to get the zone id of the website to purge
 # curl -X GET "https://api.cloudflare.com/client/v4/zones" \
 #    -H "X-Auth-Email: $cloudflare_email" \
-#    -H "X-Auth-Key: " \
+#    -H "X-Auth-Key: $cloudflare_api_key" \
 #    -H "Content-Type: application/json"

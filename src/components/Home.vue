@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     h1 Etherlearn.io
-    p The Ethereum blockchain, made fun and visual
+    p The Ethereum Blockchain, made fun and visual
     div.chapter-container
       h4 Understanding the Blockchain
       p
