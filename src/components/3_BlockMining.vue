@@ -1,6 +1,10 @@
 <template lang="pug">
   div
-    h1 Mining a block
+    app-links(
+      :previous="'2-transaction-hash'"
+      :next="'4-blocks-chain'"
+    )
+    h1 3. Mining a block
     div(style="text-align: center")
       label Mining difficulty
       input.short(v-model="difficulty" type="number")
@@ -9,10 +13,11 @@
     div(style="text-align: center")
       small Mining difficulty constraint: output hash of the Block must start with {{ difficulty }} zeros
     app-block(
-      :previousBlockHash="'---not applicable---'"
+      :blockIndex="1",
+      :previousBlockHash="previousBlockHash",
       :transactions="transactions",
-      :nonce="nonce",
-      :minedOutputHash="minedOutputHash"
+      :difficulty="difficulty",
+      :nonce="nonce"
     )
 
 
@@ -20,16 +25,18 @@
 
 <script>
 import Block from './shared/Block.vue'
+import Links from './shared/Links.vue'
 
 export default {
   components: {
+    'app-links': Links,
     'app-block': Block
   },
   data() {
     return {
       nonce: 0,
       difficulty: 1,
-      minedOutputHash: '',
+      previousBlockHash: '---not applicable---',
       transactions: [
         {
           fromAddress: 'Albert',
@@ -56,9 +63,7 @@ export default {
   },
   methods: {
     mineBlock() {
-      var results = this.mine(this.stringifiedTransactions, this.nonce, this.difficulty);
-      this.nonce = results.nonce;
-      this.minedOutputHash = results.outputHash;
+      this.nonce = this.mine(this.stringifiedTransactions, this.previousBlockHash, this.nonce, this.difficulty);
       return true;
     },
     resetNonce() {

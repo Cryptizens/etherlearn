@@ -1,12 +1,7 @@
 <template lang="html">
-    <div class="container">
-      <div class="footer-container">
-        <div>
-          © 2018 / Brought to you by <a target="_blank" href="https://cryptizens.io">Cryptizens.io</a>
-        </div>
-        <div>
-
-        </div>
+    <div class="footer-container">
+      <div>
+        © 2018 / <router-link :to="'home'">Home</router-link> / Brought to you by <a target="_blank" href="https://cryptizens.io">Cryptizens.io</a>
       </div>
     </div>
 </template>
@@ -17,20 +12,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.footer-container {
   height: $footer-height;
   border-top: 1px solid $gray-900;
-  max-width: 1000px;
+  width: 1000px;
   margin: 0 auto;
-  padding: 20px 10px 20px 10px;
-}
-.footer-container {
+  padding: 10px 20px 40px 20px;
   font-size: 14px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-align: center;
   align-items: center;
 }
 </style>
