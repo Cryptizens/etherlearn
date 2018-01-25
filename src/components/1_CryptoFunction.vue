@@ -6,7 +6,7 @@
     )
     h1 1. It all starts with crypto hashing functions
     div(style="text-align: center")
-      small Cryptocurrencies use cryptographic hashing functions.<br>For a given input of any length, these functions return a fixed-length random output.<br>It it virtually impossible to reverse-engineer the output of such functions (find the input based on the output).<br> Also, see how the slighest change in input completely changes the output.
+      small Cryptocurrencies use cryptographic hashing functions.<br>For a given input of any length, these functions return a fixed-length random output.<br>It is virtually impossible to reverse-engineer the output of such functions (find the input based on the output).<br> Also, see how the slighest change in input completely changes the output.
     div.block
       label Input data
       p

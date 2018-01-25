@@ -19,10 +19,10 @@
           pre
             |'contracts_variables': {
             |    '0xdd4f1cb1b1fdd207be770168e06ce198bb6978b5' : {
-            |        'owner': 'Kane'
-            |        'favorite_number': 21,
+            |        'owner': 'Kane',
+            |        'favorite_number': 21
             |    }
-            |}
+            |},
             |'contracts_bytecodes': {
             |    '0xdd4f1cb1b1fdd207be770168e06ce198bb6978b5' : '6060604052341561000f57600080fd5b60bb8061001d6000396000f3006....'
             |}
@@ -58,16 +58,16 @@
         pre
           |'contracts_variables': {
           |    '0xdd4f1cb1b1fdd207be770168e06ce198bb6978b5' : {
-          |        'owner': 'Kane'
-          |        'favorite_number': 42,
+          |        'owner': 'Kane',
+          |        'favorite_number': 42
           |    },
           |    '0xa94b71815a198e7910d6566e59568e4106c4dd4d' : {
-          |        'owner': 'Luke'
-          |        'favorite_weapon': 'Lightsaber',
+          |        'owner': 'Luke',
+          |        'favorite_weapon': 'Lightsaber'
           |    }
           |}
           |'contracts_bytecodes': {
-          |    '0xdd4f1cb1b1fdd207be770168e06ce198bb6978b5' : '6060604052341561000f57600080fd5b60bb8061001d600....'
+          |    '0xdd4f1cb1b1fdd207be770168e06ce198bb6978b5' : '6060604052341561000f57600080fd5b60bb8061001d600....',
           |    '0xa94b71815a198e7910d6566e59568e4106c4dd4d' : '606040526004361060485763ffffffff7c0100000000000....'
           |}
       div(v-if="virtualMachineRun")
