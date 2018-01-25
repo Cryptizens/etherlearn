@@ -144,6 +144,6 @@ input.address {
   width: 100%;
   border: none;
   color: $gray-900;
-  font-family: 'Andale Mono';
+  font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 </style>

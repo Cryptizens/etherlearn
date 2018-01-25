@@ -40,7 +40,7 @@ input {
   width: 100%;
   border: none;
   color: $gray-900;
-  font-family: 'Andale Mono';
+  font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   font-size: 16px;
 }
 </style>

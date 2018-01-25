@@ -38,7 +38,7 @@ button {
   background: darken($limeade, 5%);
   border: none;
   box-shadow: 0 2px 2px rgba(0,0,0,0.17);
-  font-family: 'Andale Mono';
+  font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   border-radius: 3px;
   padding: 0.3rem 1rem;
   margin: 0.5rem;
@@ -76,7 +76,7 @@ div.block {
   max-width: 600px;
   margin: 20px auto;
   box-shadow: 0 2px 20px rgba(0,0,0,0.17);
-  font-family: 'Andale Mono';
+  font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 
   @media (max-width: 1000px){
     margin: 20px 0 !important;
@@ -117,7 +117,7 @@ table {
   .table-input {
     border: none;
     color: $gray-900;
-    font-family: 'Andale Mono';
+    font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     font-size: 16px;
     max-width: 100px;
   }
