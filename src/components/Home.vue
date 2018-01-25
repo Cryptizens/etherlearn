@@ -3,9 +3,11 @@
     h1 Etherlearn.io
     p The Ethereum Blockchain, made fun and visual
     div.chapter-container
+      h4 Welcome
+      p This website has been designed as a companion for Smart contracts workshops run by Thomas Vanderstraeten from <a target="_blank" href="https://cryptizens.io">Cryptizens.io</a>. For the Blockchain lovers and apprentices out there, it also provides nifty tools to progress in your understanding of the underlying concepts. Also, feel free to request a workshop directly on <a target="_blank" href="https://cryptizens.io">Cryptizens.io</a>. Enjoy!
+    div.chapter-container
       h4 Understanding the Blockchain
-      p
-        small Experiment the fundamentals of the Blockchain, the technology behind Ethereum, Bitcoin, and other crypto-currencies.
+      p Experiment the fundamentals of the Blockchain, the technology behind Ethereum, Bitcoin, and other crypto-currencies.
       router-link(:to="'1-crypto-function'")
         button Crypto functions
       router-link(:to="'2-transaction-hash'")
@@ -16,8 +18,7 @@
         button Chaining blocks
     div.chapter-container
       h4 Understanding Ethereum Smart contracts
-      p
-        small Understand how Ethereum extends the Blockchain to include intelligent programming. Ensure you checked the toolkit first, as you'll need MetaMask with a few Rinkeby Testnet ETH to run these examples.
+      p Understand how Ethereum extends the Blockchain to include intelligent programming. Ensure you checked the toolkit first, as you'll need MetaMask with a few Rinkeby Testnet ETH to run these examples.
       router-link(:to="'5-smart-contract'")
         button Smart contract
       router-link(:to="'6-deployment'")
@@ -28,8 +29,7 @@
         button Ethereum mining
     div.chapter-container
       h4 Toolkit
-      p
-        small These nice tools will help you not to crack your brain open while learning Ethereum.
+      p These nice tools will help you not to crack your brain open while learning Ethereum.
       a(href="https://metamask.io" target="_blank")
         button MetaMask
       a(href="https://faucet.rinkeby.io/" target="_blank")

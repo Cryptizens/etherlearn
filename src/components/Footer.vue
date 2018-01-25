@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="footer-container">
       <div>
-        © 2018 / <router-link :to="'home'">Home</router-link> / Brought to you by <a target="_blank" href="https://cryptizens.io">Cryptizens.io</a>
+        © 2018 / <router-link :to="'home'">Home</router-link> / Brought to you by Thomas Vanderstraeten from <a target="_blank" href="https://cryptizens.io">Cryptizens.io</a>
       </div>
     </div>
 </template>
