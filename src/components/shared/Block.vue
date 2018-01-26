@@ -41,7 +41,7 @@ export default {
       return this.sha256(JSON.stringify(this.transactions));
     },
     outputHash() {
-      return this.sha256(JSON.stringify(this.transactions) + this.previousBlockHash + this.nonce.toString());
+      return this.sha256(this.transactionsHash + this.previousBlockHash + this.nonce.toString());
     },
     successfullyMined() {
       return this.isMined(this.outputHash, this.difficulty);

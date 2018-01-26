@@ -36,7 +36,7 @@ export default {
     return {
       nonce: 0,
       difficulty: 1,
-      previousBlockHash: '---not applicable---',
+      previousBlockHash: 'n.a.',
       transactions: [
         {
           fromAddress: 'Albert',
@@ -57,13 +57,13 @@ export default {
     }
   },
   computed: {
-    stringifiedTransactions() {
-      return JSON.stringify(this.transactions);
+    transactionsHash() {
+      return this.sha256(JSON.stringify(this.transactions));
     }
   },
   methods: {
     mineBlock() {
-      this.nonce = this.mine(this.stringifiedTransactions, this.previousBlockHash, this.nonce, this.difficulty);
+      this.nonce = this.mine(this.transactionsHash, this.previousBlockHash, this.nonce, this.difficulty);
       return true;
     },
     resetNonce() {

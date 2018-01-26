@@ -58,7 +58,7 @@ export default {
         three: 0
       },
       difficulty: 1,
-      firstPreviousBlockHash: '---not applicable---',
+      firstPreviousBlockHash: 'n.a.',
       transactionsSet: [
         [
           {
@@ -112,9 +112,9 @@ export default {
   },
   methods: {
     mineBlocks() {
-      this.nonces.one   = this.mine(this.stringifiedTransactions(0), this.firstPreviousBlockHash, this.nonces.one, this.difficulty);
-      this.nonces.two   = this.mine(this.stringifiedTransactions(1), this.outputHashOne, this.nonces.two, this.difficulty);
-      this.nonces.three = this.mine(this.stringifiedTransactions(2), this.outputHashTwo, this.nonces.three, this.difficulty);
+      this.nonces.one   = this.mine(this.sha256(this.stringifiedTransactions(0)), this.firstPreviousBlockHash, this.nonces.one, this.difficulty);
+      this.nonces.two   = this.mine(this.sha256(this.stringifiedTransactions(1)), this.outputHashOne, this.nonces.two, this.difficulty);
+      this.nonces.three = this.mine(this.sha256(this.stringifiedTransactions(2)), this.outputHashTwo, this.nonces.three, this.difficulty);
       return true;
     },
     stringifiedTransactions: function(index) {
