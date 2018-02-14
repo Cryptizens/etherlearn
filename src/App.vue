@@ -31,7 +31,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: $base-font;
   letter-spacing: -.01em;
-  font-family: 'Avenir';
+  font-family: 'Avenir', 'Lato';
 }
 
 button {
