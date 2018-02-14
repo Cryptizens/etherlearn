@@ -101,13 +101,13 @@ export default {
   },
   computed: {
     outputHashOne() {
-      return this.sha256(this.stringifiedTransactions(0) + this.firstPreviousBlockHash + this.nonces.one.toString());
+      return this.sha256(this.sha256(this.stringifiedTransactions(0)) + this.firstPreviousBlockHash + this.nonces.one.toString());
     },
     outputHashTwo() {
-      return this.sha256(this.stringifiedTransactions(1) + this.outputHashOne + this.nonces.two.toString());
+      return this.sha256(this.sha256(this.stringifiedTransactions(1)) + this.outputHashOne + this.nonces.two.toString());
     },
     outputHashThree() {
-      return this.sha256(this.stringifiedTransactions(2) + this.outputHashTwo + this.nonces.three.toString());
+      return this.sha256(this.sha256(this.stringifiedTransactions(2)) + this.outputHashTwo + this.nonces.three.toString());
     }
   },
   methods: {
